@@ -1,4 +1,4 @@
-FROM node:6.10.0
+FROM node:6.11.0
 MAINTAINER Aaron Picht <apicht@users.noreply.github.com>
 
 # Let the container know that there is no tty
@@ -70,7 +70,7 @@ RUN apt-get clean && apt-get autoclean && apt-get --purge -y autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Show versions
-RUN node -v
-RUN npm -v
-RUN php -v
-RUN composer -V
+RUN node -v \
+    npm -v \
+    php -v \
+    composer -V
